@@ -15,6 +15,7 @@ body {
   flex-direction: column;
   align-items: center;
   min-height: 100vh;
+  padding-bottom: 7em;
 }
 
 /*------------------------------------------------------- Navbar Styling -------------------------------------------------------*/
@@ -384,7 +385,7 @@ body {
   color: white;
   text-align: center;
   /* padding: 15px 0; */
-  position: sticky;
+  position: fixed;
   bottom: 0;
   left: 0;
   height: 7em;
