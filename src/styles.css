@@ -1,0 +1,492 @@
+/*------------------------------------------------------- General Styling -----------------------------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f8f9fa;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/*------------------------------------------------------- Navbar Styling -------------------------------------------------------*/
+.navbar {
+  width: 100%;
+  background-color: #646464 !important;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.navbar-brand {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/*------------------------------------------------------- Navbar container ----------------------------------------------------*/
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Title (left-aligned) */
+.navbar-title {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Filters (right-aligned) */
+.nav-filters {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-label {
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  padding-bottom: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+/* Underline on active filter */
+.nav-label.active {
+  border-bottom: 2px solid white;
+}
+
+
+/*-------------------------------------------------------- Form Styling -------------------------------------------------------*/
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background: white !important;
+  padding: 20px !important;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  margin-top: 5em;
+}
+
+.form-container input {
+  padding: 10px;
+  border: 1.5px solid black;
+  border-radius: 4px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form-container input:focus {
+  border-color: #007bff;
+}
+
+.form-container button {
+  background-color: #232223fa;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Home Page */
+.home-container {
+  text-align: center;
+  padding: 20px;
+}
+
+/*--------------------------------------------- Country List ------------------------------------------------------*/
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.country-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.country-card {
+  background: white;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+  width: 21.5em;
+}
+
+.country-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.country-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 5px; 
+}
+
+.country-card h5 {
+  font-size: 18px;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.country-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.load-more-btn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  border: none;
+  background-color: #646464;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.load-more-btn:hover {
+  background-color: #0056b3;
+}
+
+.slider-container button {
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  margin: 0 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+
+
+.slider-container {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  margin: 20px auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 700px;
+  margin: auto;
+  text-align: center;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/*--------------------------------------------------------- Navigation Arrows -------------------------------------------------*/
+
+.slider-arrow {
+  position: absolute;
+  bottom: 10px;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 10px 15px;
+}
+
+.slider-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.left-arrow { 
+  left: 20px; 
+}
+.right-arrow { 
+  right: 20px; 
+}
+
+/*-------------------------------------------------------- Dots Indicator -----------------------------------------------------*/
+.slider-dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.dot {
+  background: white;
+  border-radius: 50%;
+  transition: background 0.3s;
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: white;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: black;
+}
+
+/*----------------------------------------------------- Log In -----------------------------------------------------------------*/
+.error-text {
+  color: red;
+  font-size: 0.5rem; /* Adjust the font size as needed */
+  margin-top: 0.1rem; /* Optional: adds space above the error message */
+}
+
+/* Links */
+
+.linktagdecor {
+  text-decoration: none;
+  font-size: 0.8em;
+  color: #007bff;
+}
+
+.spantagdecor {
+  font-size: 0.8em;
+}
+
+/*----------------------------------------------------------- Checkbox --------------------------------------------------------*/
+
+.checkboxstyle {
+  transform: scale(1);
+  margin-right: 10px;
+}
+
+.checkboxstyle:checked {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+/*----------------------------------------------------------- Divider Text -----------------------------------------------------*/
+
+.text-between-lines {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: 0.8em;
+}
+
+.text-between-lines::before,
+.text-between-lines::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #ddd;
+  margin: 5px;
+}
+
+/*------------------------------------------------------- Labels --------------------------------------------------------------*/
+
+.labelStyling {
+  font-size: 0.8em;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.col-md-4 {
+  flex: 1 1 300px;
+  max-width: 300px;
+}
+
+.card {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.text-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.text-center button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.text-center button:hover {
+  background: #0056b3;
+}
+
+/*---------------------------------------------------------- Footer -----------------------------------------------------------*/
+
+.footer {
+  width: 100%;
+  background-color: #646464;
+  color: white;
+  text-align: center;
+  /* padding: 15px 0; */
+  /* position: fixed; */
+  bottom: 0;
+  left: 0;
+  height: 7em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  flex-direction: column;
+  font-size: 14px;
+}
+
+.body-content {
+  padding-bottom: 80px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/*------------------------------------------------------ Social Loging --------------------------------------------------------*/
+
+.social-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 10px;
+}
+
+.social-btn {
+  border: 1.5px solid #ddd;
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* .social-btn:hover {
+  background-color: #f0f0f0;
+} */
+
+/*------------------------------------------------------Responsive Design------------------------------------------------------*/
+
+@media (max-width: 1200px) {
+  .country-list {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
+@media (max-width: 992px) {
+  .country-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slider-container {
+    width: 90%;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .country-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .slider-container {
+    width: 100%;
+    height: 250px;
+  }
+
+  .navbar {
+    font-size: 18px;
+  }
+
+  .footer p {
+    font-size: 14px;
+  }
+
+  .body-content {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 576px) {
+  .country-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .slider-container {
+    height: 200px;
+  }
+
+  .form-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .social-login {
+    flex-direction: unset;
+  }
+}
