@@ -384,7 +384,7 @@ body {
   color: white;
   text-align: center;
   /* padding: 15px 0; */
-  /* position: fixed; */
+  position: sticky;
   bottom: 0;
   left: 0;
   height: 7em;
